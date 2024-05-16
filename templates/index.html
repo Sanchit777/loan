@@ -17,15 +17,15 @@
 .container {
     max-width: 600px;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 5px 5px 11px rgba(0, 0, 0, 0.2), inset -5px -5px 11px rgba(255, 255, 255, 0.75);
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #fff;
 }
 
 form {
@@ -36,18 +36,20 @@ label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: white;
 }
-
 select, input[type="number"] {
     width: calc(100% - 10px);
     padding: 8px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    background: transparent;
+    color: white;
 }
 
 button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: transparent;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -55,10 +57,13 @@ button[type="submit"] {
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
+    box-shadow: inset 5px 5px 11px rgba(0, 0, 0, 0.2), inset -5px -5px 11px rgb(104 47 47 / 75%);
 }
-
 button[type="submit"]:hover {
     background-color: #45a049;
+}
+option{
+    color: black;
 }
 
 @media screen and (max-width: 600px) {
@@ -71,7 +76,7 @@ button[type="submit"]:hover {
     </style>
 
 </head>
-<body>
+<body style="background: url(https://img.freepik.com/free-vector/realistic-neon-speed-motion-background_23-2148971519.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1715731200&semt=ais_user);">
     <div class="container">
     <h1>Loan Prediction Form</h1>
     <form action="/predict" method="post">
